@@ -1,0 +1,100 @@
+/* This is where I keep the reusable variables */
+:root {
+	
+	--TransitionDelay: .25s;
+	--TransitionTime: width 1s, height 1s, border 1s;
+	--NonTransitionBorder: 2px solid  #c8c8c8;
+	--NonTransitionHeight: 9em;
+	--NonTransitionWidth: 12.672em;
+	--TransitionHeight: 18em;
+	--TransitionWidth: 25.344em;
+	--TransitionBorderWidth: .25em;
+	--TransitionBorderStyle: solid;
+}
+
+body {
+    background: #FFFFFF url("Pictures/MFW.jpg") no-repeat center center fixed;
+	/*
+	background-color: #FFFFFF;
+	background-image: url("Pictures/MFW.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;*/
+}
+
+
+#LogoFourChan {
+    border: var(--NonTransitionBorder);
+    height: var(--NonTransitionHeight);
+    width: var(--NonTransitionWidth);
+    transition: var(--TransitionTime);
+    transition-delay: var(--TransitionDelay);
+}
+
+#LogoFourChan:hover {
+    height: var(--TransitionHeight);
+    width: var(--TransitionWidth);
+    border: var(--TransitionBorderWidth) var(--TransitionBorderStyle) lawngreen;
+}
+
+#LogoYoutube {
+    border: var(--NonTransitionBorder);
+    height: var(--NonTransitionHeight);
+    width: var(--NonTransitionWidth);
+    transition: var(--TransitionTime);
+    transition-delay: var(--TransitionDelay);
+}
+
+#LogoYoutube:hover {
+    height: var(--TransitionHeight);
+    width: var(--TransitionWidth);
+    border: var(--TransitionBorderWidth) var(--TransitionBorderStyle) red;
+}
+
+#LogoImgur {
+    border: var(--NonTransitionBorder);
+    height: var(--NonTransitionHeight);
+    width: var(--NonTransitionWidth);
+    transition: var(--TransitionTime);
+    transition-delay: var(--TransitionDelay);
+}
+
+#LogoImgur:hover {
+    height: var(--TransitionHeight);
+    width: var(--TransitionWidth);
+    border: var(--TransitionBorderWidth) var(--TransitionBorderStyle) forestgreen;
+}
+
+a {
+    margin: 2em 2em 2em 2em;
+}
+
+.ScrollingText {
+    height: 1em;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0em;
+    left: -.01em;
+}
+
+@keyframes scrollingText {
+    0% {left: 100%; color:#ff0000;} /* Red */
+	14% {color:#ff8000;} /* Orange */
+	28% {color:#ffff00;} /* Yellow */
+	42% {color:#40ff00;} /* Green */
+	56% {color:#0080ff;} /* Blue */
+	70% {color:#00ffff;} /* Cyan */
+	84% {color:#bf00ff;} /* Purple */
+    100% {left: -11%; color:#ff0000;} /* Red */
+}
+
+#Text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Tahoma;
+    animation: scrollingText 15s linear infinite;
+}
